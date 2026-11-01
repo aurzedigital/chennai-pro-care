@@ -5,17 +5,18 @@ import './style.css';
 const B = {
   phone: '919344532942',
   phone2: '919344531524',
+  phone3: '918940964704',
   email: 'chennaiprotankcleaners@gmail.com',
   address: 'Adambakkam, Chennai',
-  maps: 'https://www.google.com/maps/place/Chennai+Pro+Water+Tank+Cleaning+Services/@12.9883506,80.1987337,17z/data=!4m12!1m2!2m1!1schennai+pro+water+tank+cleaning+services!3m8!1s0x3a525d8664dffecf:0xcb233fe8ccf41ac2!8m2!3d12.9883506!4d80.2032399!9m1!1b1!15sCihjaGVubmFpIHBybyB3YXRlciB0YW5rIGNsZWFuaW5nIHNlcnZpY2VzWioiKGNoZW5uYWkgcHJvIHdhdGVyIHRhbmsgY2xlYW5pbmcgc2VydmljZXOSARt3YXRlcl90YW5rX2NsZWFuaW5nX3NlcnZpY2XgAQA!16s%2Fg%2F11tck4h3dg?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D'
+  maps: 'https://www.google.com/maps/place/Chennai+Pro+Water+Tank+Cleaning+Services/@12.9883506,80.2032399,17z/data=!3m1!4b1!4m6!3m5!1s0x3a525d8664dffecf:0xcb233fe8ccf41ac2!8m2!3d12.9883506!4d80.2032399!16s%2Fg%2F11tck4h3dg?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D'
 };
 
 const LOCATIONS = [
   {
     name: 'Chennai Pro Water Tank Cleaning Services',
     area: 'Adambakkam, Chennai',
-    map: 'https://www.google.com/maps/place/Chennai+Pro+Water+Tank+Cleaning+Services/@12.9883506,80.1987337,17z/data=!4m12!1m2!2m1!1schennai+pro+water+tank+cleaning+services!3m8!1s0x3a525d8664dffecf:0xcb233fe8ccf41ac2!8m2!3d12.9883506!4d80.2032399!9m1!1b1!15sCihjaGVubmFpIHBybyB3YXRlciB0YW5rIGNsZWFuaW5nIHNlcnZpY2VzWioiKGNoZW5uYWkgcHJvIHdhdGVyIHRhbmsgY2xlYW5pbmcgc2VydmljZXOSARt3YXRlcl90YW5rX2NsZWFuaW5nX3NlcnZpY2XgAQA!16s%2Fg%2F11tck4h3dg?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D',
-    embed: 'https://www.google.com/maps?q=12.9883506,80.2032399&output=embed'
+    map: 'https://www.google.com/maps/place/Chennai+Pro+Water+Tank+Cleaning+Services/@12.9883506,80.2032399,17z/data=!3m1!4b1!4m6!3m5!1s0x3a525d8664dffecf:0xcb233fe8ccf41ac2!8m2!3d12.9883506!4d80.2032399!16s%2Fg%2F11tck4h3dg?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D',
+    embed: 'https://maps.google.com/maps?q=12.9883506,80.2032399&z=17&output=embed'
   },
   {
     name: 'Chennai Pro Care Pipeline Cleaners',
@@ -31,7 +32,7 @@ const SOCIAL = {
   youtube: 'https://www.youtube.com/channel/UCXbx0CzmkOxxp-Rd1smHM8g'
 };
 
-const GOOGLE_REVIEWS = 'https://www.google.com/maps/place/Chennai+Pro+Care+Pipeline+Cleaners/@12.9345571,80.1152387,15z/data=!4m6!3m5!1s0x3a525ff246784945:0x88a508a708989676!8m2!3d12.9345738!4d80.1254189!16s%2Fg%2F11zxwzxngp?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D';
+const GOOGLE_REVIEWS = 'https://www.google.com/maps/place/Chennai+Pro+Water+Tank+Cleaning+Services/@12.9883506,80.2032399,17z/data=!4m8!3m7!1s0x3a525d8664dffecf:0xcb233fe8ccf41ac2!8m2!3d12.9883506!4d80.2032399!9m1!1b1!16s%2Fg%2F11tck4h3dg?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D';
 
 const wa = text =>
   `https://wa.me/${B.phone}?text=${encodeURIComponent(text)}`;
@@ -153,9 +154,7 @@ const productNames = [
 // External product images are illustrative references. Confirm the exact
 // supplied brand/specification and suitability before publishing as stock.
 const chlorinePhotos = [
-  'https://poolife.com/wp-content/uploads/sites/8/2022/01/42120-a-plf-mpt-xtra-4lb-front.png',
-  'https://kywiec.vtexassets.com/arquivos/ids/201289/435882.jpg?v=638574303287130000',
-  'https://media.adeo.com/mkp/dc57fa5d89292a594c81beb661a3c6ce/media.png?fit=bounds&format=jpg&height=1600&quality=80&width=1600'
+  '/images/Chlorine.png'
 ];
 const pumpPhotos = ['/images/pump-1.png', '/images/pump-2.png', '/images/pump-3.png'];
 const waterTestingPhotos = [
@@ -173,14 +172,16 @@ const waterTestingVideoLink = 'https://washresources.cawst.org/en/resources/6c78
 const products = [
   {
     name: productNames[0],
-    price: 499,
+    price: 199,
+    quantity: '5L',
     description: 'Chlorine treatment products for appropriate water-system applications. Confirm product grade and intended use before purchase.',
     media: chlorinePhotos,
     videoLink: null
   },
   {
     name: productNames[1],
-    price: 299,
+    price: 1499,
+    originalPrice: 1999,
     description: 'Submersible water pump with float-switch configuration. Contact us to confirm availability, specifications and compatibility.',
     media: pumpPhotos,
     videoLink: null
@@ -645,12 +646,71 @@ const newsItems = [
   { title: 'Report Highlights Sewage Flow into Puzhal Lake', date: 'January 13, 2026', tag: 'Chennai Water Source', source: 'DT Next', href: 'https://www.dtnext.in/news/chennai/drinking-water-contamination-sewage-flows-unchecked-into-puzhal-lake', image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85', fallback: '/images/hygine.png' }
 ];
 
+const whyBenefits = [
+  {
+    title: 'Experienced Team',
+    subtitle: 'Trained professionals',
+    image: '/images/chennai-pro-care-team.png',
+    alt: 'Chennai Pro Care service team',
+    detail: 'Our trained team follows a systematic approach to water-tank and sump cleaning. We focus on careful work, clear communication and dependable service for homes and businesses.'
+  },
+  {
+    title: 'Modern Equipment',
+    subtitle: 'Efficient cleaning methods',
+    image: '/images/why-professional-equipment.png',
+    alt: 'Professional cleaning equipment',
+    detail: 'We use professional cleaning equipment and suitable methods to support efficient cleaning of water-storage systems. The approach is selected according to the site and cleaning requirement.'
+  },
+  {
+    title: 'Safety & Hygiene',
+    subtitle: 'Hygiene-first approach',
+    image: '/images/hygine.png',
+    alt: 'Professional cleaning and hygiene work',
+    detail: 'Hygiene is central to our work. Our team takes care during the cleaning process and aims to leave the tank or sump area clean and orderly after the service.'
+  },
+  {
+    title: 'Clear Pricing',
+    subtitle: 'Quote based on requirement',
+    image: '/images/pricing.png',
+    alt: 'Clear pricing',
+    detail: 'Every property and water-storage system can have different requirements. We discuss the scope and provide a quote based on the tank size, access and work involved before confirming the service.'
+  }
+];
+
+function WhyBenefitModal({ benefit, onClose }) {
+  if (!benefit) return null;
+  return (
+    <div className="modalbg" onClick={onClose}>
+      <style>{`
+        .why-detail-modal{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);width:min(900px,94vw);max-height:88vh;overflow:auto;background:#fff;border-radius:20px;box-shadow:0 24px 80px rgba(0,0,0,.25)}
+        .why-detail-image{min-height:360px;background:#eef6fb}
+        .why-detail-image img{width:100%;height:100%;min-height:360px;object-fit:cover;display:block}
+        .why-detail-copy{padding:48px 38px;display:flex;flex-direction:column;justify-content:center}
+        .why-detail-copy h2{margin:8px 0 16px;color:#0b3b68}
+        .why-detail-copy p{line-height:1.8;color:#58718a}
+        @media(max-width:640px){.why-detail-modal{grid-template-columns:1fr}.why-detail-image,.why-detail-image img{min-height:220px;height:220px}.why-detail-copy{padding:28px 24px}}
+      `}</style>
+      <div className="why-detail-modal" onClick={event => event.stopPropagation()}>
+        <button className="close" onClick={onClose} aria-label="Close details">×</button>
+        <div className="why-detail-image"><img src={benefit.image} alt={benefit.alt} /></div>
+        <div className="why-detail-copy">
+          <p className="eyebrow">WHY CHOOSE US</p>
+          <h2>{benefit.title}</h2>
+          <strong>{benefit.subtitle}</strong>
+          <p>{benefit.detail}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [open, setOpen] = useState(false);
   const [prod, setProd] = useState(null);
   const [serviceVideo, setServiceVideo] = useState(null);
   const [offerOpen, setOfferOpen] = useState(false);
   const [pricingOpen, setPricingOpen] = useState(false);
+  const [activeBenefit, setActiveBenefit] = useState(null);
   const [showAllNews, setShowAllNews] = useState(false);
   const [form, setForm] = useState({});
   const [aboutStats, setAboutStats] = useState({
@@ -1045,194 +1105,29 @@ Message: ${form.message || ''}`;
             </p>
           </div>
 
-          <div
-            className="benefits"
-            style={{
-              gridColumn: '1 / -1',
-              width: '100%'
-            }}
-          >
-            {/* EXPERIENCED TEAM */}
-            <article
-              style={{
-                flexDirection: 'column',
-                alignItems: 'stretch',
-                textAlign: 'center',
-                padding: '0 0 20px',
-                overflow: 'hidden',
-                minHeight: '255px',
-                transition: 'transform .25s ease, box-shadow .25s ease'
-              }}
-            >
-              <span
+          <div className="benefits" style={{ gridColumn: '1 / -1', width: '100%' }}>
+            {whyBenefits.map(benefit => (
+              <button
+                type="button"
+                className="why-benefit-card"
+                key={benefit.title}
+                onClick={() => setActiveBenefit(benefit)}
                 style={{
-                  display: 'block',
-                  width: '100%',
-                  height: '150px',
-                  overflow: 'hidden',
-                  borderRadius: '13px 13px 0 0',
-                  fontSize: '0'
+                  display: 'flex', flexDirection: 'column', alignItems: 'stretch',
+                  textAlign: 'center', padding: '0 0 20px', overflow: 'hidden',
+                  minHeight: '255px', border: '0', cursor: 'pointer',
+                  background: 'transparent', color: 'inherit', font: 'inherit'
                 }}
               >
-                <img
-                  src="/images/chennai-pro-care-team.png"
-                  alt="Chennai Pro Care service team"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block'
-                  }}
-                />
-              </span>
-
-              <div style={{ padding: '18px 16px 0' }}>
-                <b style={{ fontSize: '14px' }}>
-                  Experienced Team
-                </b>
-
-                <small style={{ fontSize: '10px' }}>
-                  Trained professionals
-                </small>
-              </div>
-            </article>
-
-            {/* MODERN EQUIPMENT */}
-            <article
-              style={{
-                flexDirection: 'column',
-                alignItems: 'stretch',
-                textAlign: 'center',
-                padding: '0 0 20px',
-                overflow: 'hidden',
-                minHeight: '255px',
-                transition: 'transform .25s ease, box-shadow .25s ease'
-              }}
-            >
-              <span
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  height: '150px',
-                  overflow: 'hidden',
-                  borderRadius: '13px 13px 0 0',
-                  fontSize: '0'
-                }}
-              >
-                <img
-                  src="/images/why-professional-equipment.png"
-                  alt="Professional cleaning equipment"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block'
-                  }}
-                />
-              </span>
-
-              <div style={{ padding: '18px 16px 0' }}>
-                <b style={{ fontSize: '14px' }}>
-                  Modern Equipment
-                </b>
-
-                <small style={{ fontSize: '10px' }}>
-                  Efficient cleaning methods
-                </small>
-              </div>
-            </article>
-
-            {/* SAFETY & HYGIENE */}
-            <article
-              style={{
-                flexDirection: 'column',
-                alignItems: 'stretch',
-                textAlign: 'center',
-                padding: '0 0 20px',
-                overflow: 'hidden',
-                minHeight: '255px',
-                transition: 'transform .25s ease, box-shadow .25s ease'
-              }}
-            >
-              <span
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  height: '150px',
-                  overflow: 'hidden',
-                  borderRadius: '13px 13px 0 0',
-                  fontSize: '0'
-                }}
-              >
-                <img
-                  src="/images/hygine.png"
-                  alt="Professional cleaning and hygiene work"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block'
-                  }}
-                />
-              </span>
-
-              <div style={{ padding: '18px 16px 0' }}>
-                <b style={{ fontSize: '14px' }}>
-                  Safety & Hygiene
-                </b>
-
-                <small style={{ fontSize: '10px' }}>
-                  Hygiene-first approach
-                </small>
-              </div>
-            </article>
-
-            {/* CLEAR PRICING */}
-            <article
-              style={{
-                flexDirection: 'column',
-                alignItems: 'stretch',
-                textAlign: 'center',
-                padding: '0 0 20px',
-                overflow: 'hidden',
-                minHeight: '255px',
-                transition: 'transform .25s ease, box-shadow .25s ease'
-              }}
-            >
-              <span
-                style={{
-                  display: 'grid',
-                  placeItems: 'center',
-                  width: '100%',
-                  height: '150px',
-                  overflow: 'hidden',
-                  borderRadius: '13px 13px 0 0',
-                  background: 'linear-gradient(135deg, #eaf7ff, #f8fcff)',
-                  fontSize: '0'
-                }}
-              >
-                <img
-                  src="/images/pricing.png"
-                  alt="Clear pricing"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block'
-                  }}
-                />
-              </span>
-
-              <div style={{ padding: '18px 16px 0' }}>
-                <b style={{ fontSize: '14px' }}>
-                  Clear Pricing
-                </b>
-
-                <small style={{ fontSize: '10px' }}>
-                  Quote based on requirement
-                </small>
-              </div>
-            </article>
+                <span style={{ display: 'block', width: '100%', height: '150px', overflow: 'hidden', borderRadius: '13px 13px 0 0' }}>
+                  <img src={benefit.image} alt={benefit.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                </span>
+                <span style={{ display: 'block', padding: '18px 16px 0' }}>
+                  <b style={{ display: 'block', fontSize: '14px' }}>{benefit.title}</b>
+                  <small style={{ display: 'block', fontSize: '10px' }}>{benefit.subtitle}</small>
+                </span>
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -1262,7 +1157,7 @@ Message: ${form.message || ''}`;
           <p className="eyebrow">CUSTOMER FEEDBACK</p>
           <h2>What Our Customers Say</h2>
           <div className="review-heading-rating">
-            <strong className="review-rating-number">4.6</strong>
+            <strong className="review-rating-number">5.0</strong>
             <span aria-label="Five stars">★★★★★</span>
             <span className="review-rating-label">Google customer reviews</span>
             <a href={GOOGLE_REVIEWS} target="_blank" rel="noreferrer">View on Google →</a>
@@ -1366,9 +1261,16 @@ Message: ${form.message || ''}`;
                     event.currentTarget.src = '/images/hygine.png';
                   }}
                 />
-                <span className="media-count">
-                  {product.media.length} PHOTOS{product.videoLink && !product.sold ? ' + VIDEO' : ''}
-                </span>
+                {product.quantity && (
+                  <span style={{ position: 'absolute', top: '12px', right: '12px', zIndex: 2, background: '#0b3b68', color: '#fff', padding: '7px 11px', borderRadius: '7px', fontSize: '12px', fontWeight: 800 }}>
+                    {product.quantity}
+                  </span>
+                )}
+                {product.media.length > 1 && (
+                  <span className="media-count">
+                    {product.media.length} PHOTOS{product.videoLink && !product.sold ? ' + VIDEO' : ''}
+                  </span>
+                )}
                 {product.sold ? (
                   <span className="sold-badge">SOLD</span>
                 ) : (
@@ -1387,7 +1289,12 @@ Message: ${form.message || ''}`;
                     </>
                   ) : (
                     <>
-                      <b>{product.price ? `₹${product.price.toLocaleString('en-IN')}` : 'Price on enquiry'}</b>
+                      <div className="product-price-display">
+                        {product.originalPrice && (
+                          <del>₹{product.originalPrice.toLocaleString('en-IN')}</del>
+                        )}
+                        <b>{product.price ? `₹${product.price.toLocaleString('en-IN')}` : 'Price on enquiry'}</b>
+                      </div>
                       <button
                         onClick={event => {
                           event.stopPropagation();
@@ -1433,7 +1340,7 @@ Message: ${form.message || ''}`;
 
           <div className="about-timeline about-timeline-second-row">
             <div className="story-node story-start">
-              <div className="story-year">2022</div>
+              <div className="story-year" style={{ display: 'grid', placeItems: 'center', textAlign: 'center', lineHeight: 1.05, width: '96px', height: '96px', flexShrink: 0 }}>2022-NOW</div>
 
               <div className="story-connector" aria-hidden="true">
                 <div className="story-dot"></div>
@@ -1454,7 +1361,7 @@ Message: ${form.message || ''}`;
             </div>
 
             <div className="story-node story-now">
-              <div className="story-year">NOW</div>
+              <div className="story-year" style={{ display: 'grid', placeItems: 'center', textAlign: 'center', lineHeight: 1.05, width: '96px', height: '96px', flexShrink: 0 }}>2025-NOW</div>
 
               <div className="story-connector" aria-hidden="true">
                 <div className="story-dot"></div>
@@ -1463,7 +1370,7 @@ Message: ${form.message || ''}`;
               <div className="story-card">
                 <span>THE JOURNEY CONTINUES</span>
                 <h3>
-                  Led by CEO <strong>Abishek Manikandan</strong>
+                  Led by CEO <strong>Abisheik Manikandan</strong>
                 </h3>
                 <p>
                   Building on the company's foundation with professional teams,
@@ -1631,6 +1538,10 @@ Message: ${form.message || ''}`;
               📞 +91 93445 31524
             </a>
 
+            <a href={'tel:+' + B.phone3}>
+              📞 +91 89409 64704
+            </a>
+
             <a href={'mailto:' + B.email}>
               ✉️ {B.email}
             </a>
@@ -1648,21 +1559,44 @@ Message: ${form.message || ''}`;
         <div className="map locations-map">
           <div className="maphead">
             <div>
-              <p className="eyebrow">OUR LOCATIONS</p>
+              <p className="eyebrow">OUR MAIN LOCATION</p>
               <b>Chennai Pro Care</b>
-              <span>Expanded to serve you through two locations</span>
+              <span>Adambakkam, Chennai</span>
             </div>
             <span className="mappin">📍</span>
           </div>
 
           <div className="mapframe locations-map-frame">
             <iframe
-              title="Map showing both Chennai Pro Care locations"
-              src="https://maps.google.com/maps?q=12.9345738,80.1254189&z=13&output=embed"
+              title="Chennai Pro Water Tank Cleaning Services, Adambakkam"
+              src={LOCATIONS[0].embed}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
+
+            <a
+              href={B.maps}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                position: 'absolute',
+                left: '50%',
+                bottom: '12px',
+                transform: 'translateX(-50%)',
+                zIndex: 2,
+                background: '#fff',
+                color: '#1a73e8',
+                padding: '9px 14px',
+                borderRadius: '8px',
+                fontSize: '12px',
+                fontWeight: 700,
+                whiteSpace: 'nowrap',
+                boxShadow: '0 2px 12px rgba(0,0,0,.28)'
+              }}
+            >
+              Open in Google Maps ↗
+            </a>
           </div>
 
           <div className="locations-directions">
@@ -1689,11 +1623,11 @@ Message: ${form.message || ''}`;
 
           <a
             className="mapbutton"
-            href="https://www.google.com/maps/dir/12.9883506,80.2032399/12.9345738,80.1254189/"
+            href={B.maps}
             target="_blank"
             rel="noreferrer"
           >
-            View Both Locations in Google Maps →
+            View Adambakkam Main Branch on Google Maps →
           </a>
         </div>
 
@@ -1798,6 +1732,7 @@ Message: ${form.message || ''}`;
         product={prod}
         onClose={() => setProd(null)}
       />
+      {activeBenefit && <WhyBenefitModal benefit={activeBenefit} onClose={() => setActiveBenefit(null)} />}
 
       {pricingOpen && (
         <PricingListModal onClose={() => setPricingOpen(false)} />

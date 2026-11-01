@@ -3683,3 +3683,40 @@ html {
     height: 18px;
   }
 }
+/* Show full product photos instead of cropping them */
+.product-image-wrap {
+  background: #fff;
+}
+.product-image-wrap img {
+  object-fit: contain;
+}
+
+.product-media-main {
+  background: #fff;
+}
+.product-media-main img {
+  object-fit: contain;
+}
+
+.media-thumbs img {
+  object-fit: contain;
+  background: #fff;
+}
+/* WHY CHOOSE US - hover zoom on the four clickable cards */
+.why-section .benefits .why-benefit-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.why-section .benefits .why-benefit-card:hover,
+.why-section .benefits .why-benefit-card:focus-visible {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 18px 40px rgba(6, 55, 101, 0.16);
+  position: relative;
+  z-index: 2;
+}
+.why-section .benefits .why-benefit-card > span:first-child img {
+  transition: transform 0.5s ease;
+}
+.why-section .benefits .why-benefit-card:hover > span:first-child img,
+.why-section .benefits .why-benefit-card:focus-visible > span:first-child img {
+  transform: scale(1.1);
+}
