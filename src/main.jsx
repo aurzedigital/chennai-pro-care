@@ -78,13 +78,10 @@ const heroImage =
   localImageFiles[0] ||
   'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=85';
 
-const demoVideo =
-  'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4';
 
 /* =========================================================
    CORE SERVICES
-   Replace the three video URLs below with the client's
-   approved service videos when ready.
+   Service videos displayed on the website.
    ========================================================= */
 
 const services = [
@@ -147,8 +144,8 @@ const supportingServices = [
 ];
 
 const productNames = [
-  'Chlorine Treatment Products',
-  'Submersible Water Pump with Float Switch',
+  'Chlorine',
+  'Pump',
   'Water-Quality Testing Kits',
   'Tank-Cleaning Tools & Accessories'
 ];
@@ -156,7 +153,7 @@ const productNames = [
 // External product images are illustrative references. Confirm the exact
 // supplied brand/specification and suitability before publishing as stock.
 const chlorinePhotos = [
-  'https://www.3chlorine.com/cdn/shop/files/1_73f59ef1-9df1-4f5c-a4c7-0d60927ab4ad.jpg?v=1746767006&width=1600',
+  'https://poolife.com/wp-content/uploads/sites/8/2022/01/42120-a-plf-mpt-xtra-4lb-front.png',
   'https://kywiec.vtexassets.com/arquivos/ids/201289/435882.jpg?v=638574303287130000',
   'https://media.adeo.com/mkp/dc57fa5d89292a594c81beb661a3c6ce/media.png?fit=bounds&format=jpg&height=1600&quality=80&width=1600'
 ];
@@ -167,111 +164,110 @@ const waterTestingPhotos = [
   'https://www.restaurantware.com/cdn/shop/files/RWT1090-2-LR.jpg?v=1725367157'
 ];
 const tankToolPhotos = [
-  'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=85',
   'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=85',
-  'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=85'
+  'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1000&q=85',
+  'https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=1000&q=85'
 ];
-const chlorineVideoLink = 'https://www.dvidshub.net/video/554216/use-calcium-hypochlorite';
 const waterTestingVideoLink = 'https://washresources.cawst.org/en/resources/6c783156/measure-ph-free-and-total-chlorine-using-a-pooltester';
 
 const products = [
   {
     name: productNames[0],
-    price: '₹499',
-    description: 'Chlorine treatment products. Product grade and intended use must be confirmed before purchase.',
+    price: 499,
+    description: 'Chlorine treatment products for appropriate water-system applications. Confirm product grade and intended use before purchase.',
     media: chlorinePhotos,
-    videoLink: chlorineVideoLink,
-    sold: false
+    videoLink: null
   },
   {
     name: productNames[1],
-    price: '₹299',
-    description: 'Submersible water pump with float switch.',
+    price: 299,
+    description: 'Submersible water pump with float-switch configuration. Contact us to confirm availability, specifications and compatibility.',
     media: pumpPhotos,
-    videoLink: null,
-    sold: false
+    videoLink: null
   },
   {
     name: productNames[2],
-    price: '₹299',
-    description: 'Water-quality testing kits for selected parameters such as pH and chlorine.',
+    price: 299,
+    sold: true,
+    description: 'Water-testing kits for selected parameters such as pH and chlorine. Test results do not by themselves establish microbiological safety.',
     media: waterTestingPhotos,
-    videoLink: waterTestingVideoLink,
-    sold: true
+    videoLink: waterTestingVideoLink
   },
   {
     name: productNames[3],
-    price: '₹399',
-    description: 'Tank-cleaning brushes and practical cleaning accessories.',
+    price: 399,
+    sold: true,
+    description: 'Tank-cleaning brushes and accessories are a proposed category. Please confirm the exact items supplied by Chennai Pro Care.',
     media: tankToolPhotos,
-    videoLink: null,
-    sold: true
+    videoLink: null
   }
 ];
 
 const reviews = [
   {
-    name: 'Egavalli',
-    text: 'I had a great experience with Chennai Pro Water Tank Cleaning Services! Their team was very friendly and did an excellent job cleaning my water tank. The service was quick and thorough. My tank looks new now. I am very happy with their work. I recommend them to everyone who needs water tank cleaning. Thank you, Chennai Pro!',
-    location: 'Review dated July 11, 2025 · Justdial',
+    name: 'G. B. RAJESH',
+    meta: '4 reviews · 5 photos · 2 weeks ago',
+    date: '2 weeks ago',
+    isNew: true,
     rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
+    text: 'Excellent Water Tank Cleaning Service in Chennai! Chennai Pro Water Tank Cleaning Service provided excellent service. The team was professional, punctual, and well-organized. They cleaned the water tank thoroughly and maintained good hygiene throughout the process. Their work quality and customer service were impressive. I’m very satisfied with their service and would definitely recommend them to anyone looking for reliable water tank cleaning in Chennai. Highly recommended! Excellent service and great work!'
+  },
+  {
+    name: 'Ramya M',
+    meta: '3 reviews · 5 photos · 2 weeks ago',
+    date: '2 weeks ago',
+    isNew: true,
+    rating: 5,
+    text: 'I am fully satisfied with the tank cleaning service. The service was Excellent, the work was done neatly, and the staff were professional and friendly. Very good service at the reasonable price. Highly recommend! Thank you for your wonderful service.'
+  },
+  {
+    name: 'Egavalli',
+    meta: '1 review · 2 photos · 6 months ago',
+    date: '6 months ago',
+    rating: 5,
+    text: 'Highly recommend service in Chennai. Iam not Maintain my overhead sintex in past 2 years. The employees very knowledge about water condition and health responsibility, they complete the tank cleaning and they use water TDS level. It is very use to maintain the water tanks. Water is a basic necessary it is very important for your healthly life. Worth for price. Great job and very professional service!'
   },
   {
     name: 'Arunachalam Narayanan',
-    text: 'Chennai Pro Water Tank Cleaning Services provided excellent and fast service. The workers were efficient and thorough in cleaning the water tank. I was impressed by their professionalism and quick turnaround time. Highly recommended for home utility and repair needs.',
-    location: 'Review dated September 4, 2024 · Justdial',
+    meta: 'Local Guide · 17 reviews · 3 photos · 8 months ago',
+    date: '8 months ago',
     rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
-  },
-  {
-    name: 'Saravanan Kumar',
-    text: 'I like your work. You did what I expected.',
-    location: 'Review dated June 30, 2022 · Justdial',
-    rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
+    text: 'Recently engaged Chennai Pro Water Tank Cleaning Service and I’m truly impressed with their speed, professionalism, and perfection. They came fully equipped, including pumping motors, and handled everything efficiently. Real specialists in their work. Truly value for money. Wishing them great success ahead!'
   },
   {
     name: 'Rajesh',
-    text: 'Very excellent work 👍🏻',
-    location: 'Review dated August 22, 2025 · Justdial',
+    meta: '1 review · 7 months ago',
+    date: '7 months ago',
     rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
+    text: 'Excellent team work. In my apartment have a three 100KL capacity underground sump and 10 OHT tank i plan to clean with the help of chennai pro care they give a excellent team work and given a best service. Everyone definitely give your sump and tank to chennai pro care.'
+  },
+  {
+    name: 'grace g',
+    meta: '1 review · a month ago',
+    date: 'a month ago',
+    rating: 5,
+    text: 'Wonderful work done by Team, Thank you so much, the sump tank was in very bad condition but team work hardly and made it very clean, Price was really affordable 👌 Thank you once again team 🙌 Keep up your good work Never compromise with any of thing which you are doing now'
   },
   {
     name: 'Lavanya lavu',
-    text: 'Perfect job team thank you',
-    location: 'Review dated October 20, 2024 · Justdial',
+    meta: '5 reviews · 2 photos · 6 months ago',
+    date: '6 months ago',
     rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
-  },
-  {
-    name: 'Montford Vivek',
-    text: 'Work prefat',
-    location: 'Review dated May 28, 2024 · Justdial (spelling shown as listed)',
-    rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
+    text: 'I very satisfied my overhead tank and underground sump cleaning. The persons used complete machine cleaning. This Organic cleaning it’s very good for health. I recommend to all the viewers. Finally completed the service used TDS meter for water level condition.'
   },
   {
     name: 'Sharmila A',
-    text: '',
-    location: 'Justdial listing · written text not visible in preview',
+    meta: '4 reviews · 6 months ago',
+    date: '6 months ago',
     rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
+    text: 'My home water tank was in a very bad condition. So yesterday, I contacted the Chennai Pro Tank Cleaner team 🙏Today, (9.4.26) they sent Sanjay and John to clean the tank at our house. They did the cleaning very well and neatly. I would like to express my heartfelt thanks to the Chennai Pro Tank Cleaner team. Special thanks to Sanjay and John 🙏'
   },
   {
-    name: 'Hema priya',
-    text: '',
-    location: 'Justdial listing · written text not visible in preview',
+    name: 'Sanjay',
+    meta: '1 review · 4 months ago',
+    date: '4 months ago',
     rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
-  },
-  {
-    name: 'Cehnthamarai kannan',
-    text: '',
-    location: 'Justdial listing · written text not visible in preview',
-    rating: 5,
-    source: 'https://www.justdial.com/Chennai/Chennai-Pro-Water-Tank-Cleaning-Services-Ibacco-Ice-Cream-Adambakkam/044PXX44-XX44-220630122517-J6A5_BZDET'
+    text: 'My home at Madambakkam. My wife book tank cleaning service from chennai pro care. They did excellent service and neat work Definitely highly recommend, three types of machine cleaning, Abisheik sir explain the process of cleaning and some advisable for befits of tank cleaning. Thank you Chennai pro care and Team.'
   }
 ];
 
@@ -280,31 +276,31 @@ const goldenClientRows = [
     { name: 'Reserve Bank of India', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Reserve_Bank_of_India_logo.svg' },
     { name: 'Tidel', logo: 'https://www.tidelpark.com/manage/includes/kcfinder/upload/image/blog-images/tidel_logos-01.png' },
     { name: 'Fomra Hues', logo: 'https://www.google.com/s2/favicons?domain=fomrahousing.in&sz=128' },
-    { name: 'Kochar Homes', logo: 'https://www.sekarconstructions.com/jb-content/uploads/2024/09/Kochar-Homes-Logo.jpg' },
+    { name: 'Kochar Homes', logo: 'images/kocharhomes.png' },
     { name: 'Tagore Medical College & Hospital', logo: 'https://www.google.com/s2/favicons?domain=tagoremch.edu.in&sz=128' },
     { name: 'Sangeetha Veg Restaurant', logo: 'https://static.wixstatic.com/media/a94a23_0bd7f095ef24479198cfe21bb091441d~mv2.png/v1/fill/w_980,h_481,al_c,q_90/usm_0.66_1.00_0.01,enc_avif,quality_auto/a94a23_0bd7f095ef24479198cfe21bb091441d~mv2.png' },
     { name: 'Indian Bank', logo: 'https://companieslogo.com/img/orig/INDIANB.NS_BIG-ab454691.svg?download=true&t=1746790300' },
-    { name: 'TA Enclave', logo: null },
+    { name: 'TA Enclave', logo: '/images/TAclient.png'},
     { name: 'Casa Grande PropCare', logo: 'https://pbs.twimg.com/profile_images/886824658112200705/mY9RCU6B.jpg' },
     { name: 'YWCA of Madras', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/YWCA_Logo.svg' },
     { name: 'Akila Heights', logo: 'https://www.google.com/s2/favicons?domain=asvini.com&sz=128' },
     { name: 'Harini City', logo: 'https://www.logotypes101.com/logos/804/B17EFEBB5B4EDB1436333D579AD7C0D1/harini_city_logo.png' },
-    { name: 'Tea Break in Adambakkam', logo: null }
+    { name: 'Tea Break in Adambakkam', logo: '/images/teabreak.png' }
   ],
   [
     { name: 'Season 4 Residences', logo: 'https://www.google.com/s2/favicons?domain=season4.in&sz=128' },
     { name: 'Naturals', logo: 'https://www.google.com/s2/favicons?domain=naturals.in&sz=128' },
     { name: 'Ramada by Wyndham', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Ramada_Worldwide_logo_(2).svg' },
-    { name: 'Malles Trusted Through Generations', logo: 'https://www.malles.in/favicon.ico' },
+    { name: 'Malles Trusted Through Generations', logo: 'Malles.png' },
     { name: 'Blue Cross of India', logo: 'https://r2.cdn.yaclass.in/ef9352a5-91cb-4da9-9580-fa2f3ce0024e/bciregw1800png.png' },
-    { name: 'Chitra Township', logo: null },
+    { name: 'Chitra Township', logo: 'images/chirtatownship.png' },
     { name: 'Techno Digital', logo: 'https://technodigital.in/wp-content/uploads/2025/04/Techno-Digital-Logo-Vertical-1.png' },
     { name: 'Anvil Projects', logo: 'https://www.anvilprojects.com/imgs/logo-blue.png' },
     { name: 'California Burrito Mexican Kitchen', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/California_Burrito_logo_(2025).svg' },
     { name: 'Madras Race Club', logo: 'https://madrasraceclub.com/backend/images/MRC_Logo.png' },
     { name: 'Shree Anandhaas Sweets and Snacks', logo: 'https://cdn.prod.website-files.com/684a8af0c46603a31390dff9/694124ee900f5998cf24a00b_Logo%3Danandhaas.png' },
     { name: 'Savi3 Global Services', logo: 'https://www.google.com/s2/favicons?domain=savi3hr.in&sz=128' },
-    { name: 'Hotel Pandiyas', logo: null }
+    { name: 'Hotel Pandiyas', logo: 'images/pandiyas.png' }
   ],
   [
     { name: 'Amromed', logo: 'https://www.google.com/s2/favicons?domain=amromed.com&sz=128' },
@@ -313,10 +309,10 @@ const goldenClientRows = [
     { name: 'E-con Systems', logo: 'https://www.e-consystems.com/images/card-images/e-consystems-featured-banner.jpg' },
     { name: 'Perficient', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Perficient_logo.png' },
     { name: 'Kences Construction', logo: 'https://www.google.com/s2/favicons?domain=kences.in&sz=128' },
-    { name: 'North Town', logo: null },
+    { name: 'North Town', logo: 'images/NT.png' },
     { name: 'The Shri Ram Universal School SPR City Chennai', logo: 'https://cdn.aptoide.com/imgs/d/d/5/dd51f3830b35dce14b3af9005b347410_fgraphic.png' },
     { name: "Salma's Amar Enclave", logo: 'https://www.google.com/s2/favicons?domain=salmaconstructions.com&sz=128' },
-    { name: 'VA Distributors Adding Value to Supply Chain', logo: null },
+    { name: 'VA Distributors Adding Value to Supply Chain', logo: 'images/vad.png' },
     { name: 'Archivo Infra Inc', logo: 'https://www.google.com/s2/favicons?domain=archivo.in&sz=128' },
     { name: 'CK Wonder Kidz Kids-Preschool', logo: 'https://www.google.com/s2/favicons?domain=ckwonderkidz.in&sz=128' },
     { name: 'Kumaran Engineers Ekkaduthangal Chennai', logo: 'https://www.google.com/s2/favicons?domain=kumaranengineers.in&sz=128' }
@@ -416,7 +412,7 @@ function ProductModal({ product, onClose }) {
 
   if (!product) return null;
 
-  const hasVideo = Boolean(product.videoLink || product.video);
+  const hasVideo = product.name !== productNames[0] && Boolean(product.videoLink || product.video);
   const isVideo = hasVideo && activeMedia === product.media.length;
 
   return (
@@ -431,9 +427,9 @@ function ProductModal({ product, onClose }) {
             product.videoLink ? (
               <div className="product-video-link">
                 <span className="play-badge">▶</span>
-                <h3>Water-testing demonstration</h3>
-                <p>Opens the original demonstration page in a new tab.</p>
-                <a className="cta" href={product.videoLink} target="_blank" rel="noreferrer">Watch demonstration ↗</a>
+                <h3>Water-testing video</h3>
+                <p>Opens the water-testing video resource in a new tab.</p>
+                <a className="cta" href={product.videoLink} target="_blank" rel="noreferrer">Watch video ↗</a>
               </div>
             ) : (
               <video controls playsInline src={product.video}>
@@ -444,6 +440,10 @@ function ProductModal({ product, onClose }) {
             <img
               src={product.media[activeMedia]}
               alt={`${product.name} ${activeMedia + 1}`}
+              onError={event => {
+                event.currentTarget.onerror = null;
+                event.currentTarget.src = '/images/hygine.png';
+              }}
             />
           )}
         </div>
@@ -456,7 +456,14 @@ function ProductModal({ product, onClose }) {
               onClick={() => setActiveMedia(index)}
               aria-label={`View photo ${index + 1}`}
             >
-              <img src={photo} alt="" />
+              <img
+                src={photo}
+                alt=""
+                onError={event => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src = '/images/hygine.png';
+                }}
+              />
             </button>
           ))}
 
@@ -466,7 +473,7 @@ function ProductModal({ product, onClose }) {
               onClick={() => setActiveMedia(product.media.length)}
             >
               <span>▶</span>
-              <small>Demo</small>
+              <small>Video</small>
             </button>
           )}
         </div>
@@ -476,7 +483,7 @@ function ProductModal({ product, onClose }) {
         <p>{product.description}</p>
 
         <div className="modal-price">
-          {product.price || 'Price on enquiry'}
+          Price on enquiry
           <small>Confirm availability and specifications</small>
         </div>
 
@@ -623,13 +630,28 @@ function BlogArticleModal({ article, onClose }) {
   );
 }
 
+const newsItems = [
+  { title: 'Why Professional Water Tank Cleaning Is Essential for a Safe Water Supply', date: 'November 20, 2025', tag: 'Awareness', source: 'Chennai Pro Care', href: '/?article=safeWater', internal: true, image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=900&q=85', fallback: '/images/sump-cleaning.png' },
+  { title: 'Namakkal College Water Contamination: A Wake-Up Call for Regular Tank and Sump Cleaning', date: 'October 29, 2025', tag: 'Local Awareness', source: 'The New Indian Express', href: 'https://www.newindianexpress.com/states/tamil-nadu/2025/Oct/29/129-students-fall-sick-due-to-water-contamination-at-namakkal-engineering-college-hostel', image: '/images/news.png', fallback: '/images/hygine.png' },
+  { title: 'The Importance of Professional Tank Cleaning Services', date: 'May 24, 2025', tag: 'Article', source: 'Chennai Pro Care', href: '/?article=professional', internal: true, image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85', fallback: '/images/why-professional-equipment.png' },
+  { title: 'Water Tank Cleaning Service: What to Look for When Choosing a Provider', date: 'May 24, 2025', tag: 'Article', source: 'Chennai Pro Care', href: '/?article=chooseProvider', internal: true, image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85', fallback: '/images/why-professional-equipment.png' },
+  { title: 'Hygienic Water Starts with a Clean Tank: Essential for Commercial Establishments in Chennai', date: 'June 6, 2025', tag: 'Article', source: 'Chennai Pro Care', href: '/?article=commercial', internal: true, image: '/images/commerical_service_.png', fallback: '/images/hygine.png' },
+  { title: 'Recurring Black Silt in Water Tanks Troubles Virugambakkam', date: 'October 9, 2026', tag: 'Chennai News', source: 'Times of India', href: 'https://timesofindia.indiatimes.com/city/chennai/recurring-black-silt-in-water-tanks-troubles-virugambakkam/articleshow/134841261.cms', image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=85', fallback: '/images/sump-cleaning.png' },
+  { title: 'Video: Sewage Mixed in Drinking Water — Chennai Report', date: 'March 11, 2026', tag: 'Video', source: 'Polimer News · YouTube', href: 'https://www.youtube.com/watch?v=p93Vuk05T44', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85', fallback: '/images/hygine.png' },
+  { title: 'E. coli Found in 43 Water Samples from Chennai’s Zone 11', date: 'August 29, 2026', tag: 'Water Quality', source: 'The New Indian Express', href: 'https://www.newindianexpress.com/amp/story/cities/chennai/2026/Aug/29/ecoli-found-in-43-water-samples-from-chennais-zone-11', image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=85', fallback: '/images/hygine.png' },
+  { title: 'Sewage-Mixed Water Leaves Arumbakkam Thirsty', date: 'March 11, 2026', tag: 'Chennai News', source: 'The New Indian Express', href: 'https://www.newindianexpress.com/cities/chennai/2026/Mar/11/sewage-mixed-water-leaves-arumbakkam-thirsty', image: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=900&q=85', fallback: '/images/hygine.png' },
+  { title: 'Sewage Concerns at Chembarambakkam, a Major Chennai Water Source', date: 'September 21, 2026', tag: 'Water Pollution', source: 'The New Indian Express', href: 'https://www.newindianexpress.com/cities/chennai/2026/Sep/21/sewage-stains-chennais-major-thirst-quencher-chembarambakkam', image: 'https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=900&q=85', fallback: '/images/hygine.png' },
+  { title: 'Chennai Study Raises Questions About E. coli in RO-Purified Water', date: 'May 26, 2026', tag: 'Research', source: 'The South First', href: 'https://thesouthfirst.com/health/chennais-ro-water-looked-clear-smelled-fine-and-tasted-good-but-e-coli-disagreed/', image: 'https://s3.ap-south-1.amazonaws.com/media.thesouthfirst.com/wp-content/uploads/2026/05/iStock-1324053358-modified-057c560a-8202-4b69-a658-f4bc6f81d92d.jpg', fallback: '/images/hygine.png' },
+  { title: 'Report Highlights Sewage Flow into Puzhal Lake', date: 'January 13, 2026', tag: 'Chennai Water Source', source: 'DT Next', href: 'https://www.dtnext.in/news/chennai/drinking-water-contamination-sewage-flows-unchecked-into-puzhal-lake', image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85', fallback: '/images/hygine.png' }
+];
+
 function App() {
   const [open, setOpen] = useState(false);
   const [prod, setProd] = useState(null);
   const [serviceVideo, setServiceVideo] = useState(null);
   const [offerOpen, setOfferOpen] = useState(false);
-  const [activeBlogArticle, setActiveBlogArticle] = useState(null);
   const [pricingOpen, setPricingOpen] = useState(false);
+  const [showAllNews, setShowAllNews] = useState(false);
   const [form, setForm] = useState({});
   const [aboutStats, setAboutStats] = useState({
     years: 0,
@@ -723,9 +745,6 @@ Message: ${form.message || ''}`;
 
   return (
     <>
-      <div className="demo">
-        DEMO / REDESIGN CONCEPT — replace sample products, prices, clients and media with approved information.
-      </div>
 
       <header>
         <a className="brand" href="#home" aria-label="Chennai Pro Care home">
@@ -970,218 +989,218 @@ Message: ${form.message || ''}`;
 
 
       <section className="why-section">
-  <div className="why-inner">
-    <div
-      className="why-copy"
-      style={{
-        gridColumn: '1 / -1',
-        textAlign: 'center',
-        maxWidth: '780px',
-        margin: '0 auto'
-      }}
-    >
-      <p className="eyebrow">WHY CHOOSE US</p>
-
-      <h2>Trusted. Professional. Reliable.</h2>
-
-      <p>
-        We help homes and businesses maintain cleaner water systems
-        through systematic cleaning, trained teams and suitable
-        professional equipment.
-      </p>
-    </div>
-
-    <div
-      className="benefits"
-      style={{
-        gridColumn: '1 / -1',
-        width: '100%'
-      }}
-    >
-      {/* EXPERIENCED TEAM */}
-      <article
-        style={{
-          flexDirection: 'column',
-          alignItems: 'stretch',
-          textAlign: 'center',
-          padding: '0 0 20px',
-          overflow: 'hidden',
-          minHeight: '255px',
-          transition: 'transform .25s ease, box-shadow .25s ease'
-        }}
-      >
-        <span
-          style={{
-            display: 'block',
-            width: '100%',
-            height: '150px',
-            overflow: 'hidden',
-            borderRadius: '13px 13px 0 0',
-            fontSize: '0'
-          }}
-        >
-          <img
-            src="/images/chennai-pro-care-team.png"
-            alt="Chennai Pro Care service team"
+        <div className="why-inner">
+          <div
+            className="why-copy"
             style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block'
+              gridColumn: '1 / -1',
+              textAlign: 'center',
+              maxWidth: '780px',
+              margin: '0 auto'
             }}
-          />
-        </span>
+          >
+            <p className="eyebrow">WHY CHOOSE US</p>
 
-        <div style={{ padding: '18px 16px 0' }}>
-          <b style={{ fontSize: '14px' }}>
-            Experienced Team
-          </b>
+            <h2>Trusted. Professional. Reliable.</h2>
 
-          <small style={{ fontSize: '10px' }}>
-            Trained professionals
-          </small>
-        </div>
-      </article>
+            <p>
+              We help homes and businesses maintain cleaner water systems
+              through systematic cleaning, trained teams and suitable
+              professional equipment.
+            </p>
+          </div>
 
-      {/* MODERN EQUIPMENT */}
-      <article
-        style={{
-          flexDirection: 'column',
-          alignItems: 'stretch',
-          textAlign: 'center',
-          padding: '0 0 20px',
-          overflow: 'hidden',
-          minHeight: '255px',
-          transition: 'transform .25s ease, box-shadow .25s ease'
-        }}
-      >
-        <span
-          style={{
-            display: 'block',
-            width: '100%',
-            height: '150px',
-            overflow: 'hidden',
-            borderRadius: '13px 13px 0 0',
-            fontSize: '0'
-          }}
-        >
-          <img
-            src="/images/why-professional-equipment.png"
-            alt="Professional cleaning equipment"
+          <div
+            className="benefits"
             style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block'
+              gridColumn: '1 / -1',
+              width: '100%'
             }}
-          />
-        </span>
+          >
+            {/* EXPERIENCED TEAM */}
+            <article
+              style={{
+                flexDirection: 'column',
+                alignItems: 'stretch',
+                textAlign: 'center',
+                padding: '0 0 20px',
+                overflow: 'hidden',
+                minHeight: '255px',
+                transition: 'transform .25s ease, box-shadow .25s ease'
+              }}
+            >
+              <span
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: '150px',
+                  overflow: 'hidden',
+                  borderRadius: '13px 13px 0 0',
+                  fontSize: '0'
+                }}
+              >
+                <img
+                  src="/images/chennai-pro-care-team.png"
+                  alt="Chennai Pro Care service team"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+              </span>
 
-        <div style={{ padding: '18px 16px 0' }}>
-          <b style={{ fontSize: '14px' }}>
-            Modern Equipment
-          </b>
+              <div style={{ padding: '18px 16px 0' }}>
+                <b style={{ fontSize: '14px' }}>
+                  Experienced Team
+                </b>
 
-          <small style={{ fontSize: '10px' }}>
-            Efficient cleaning methods
-          </small>
+                <small style={{ fontSize: '10px' }}>
+                  Trained professionals
+                </small>
+              </div>
+            </article>
+
+            {/* MODERN EQUIPMENT */}
+            <article
+              style={{
+                flexDirection: 'column',
+                alignItems: 'stretch',
+                textAlign: 'center',
+                padding: '0 0 20px',
+                overflow: 'hidden',
+                minHeight: '255px',
+                transition: 'transform .25s ease, box-shadow .25s ease'
+              }}
+            >
+              <span
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: '150px',
+                  overflow: 'hidden',
+                  borderRadius: '13px 13px 0 0',
+                  fontSize: '0'
+                }}
+              >
+                <img
+                  src="/images/why-professional-equipment.png"
+                  alt="Professional cleaning equipment"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+              </span>
+
+              <div style={{ padding: '18px 16px 0' }}>
+                <b style={{ fontSize: '14px' }}>
+                  Modern Equipment
+                </b>
+
+                <small style={{ fontSize: '10px' }}>
+                  Efficient cleaning methods
+                </small>
+              </div>
+            </article>
+
+            {/* SAFETY & HYGIENE */}
+            <article
+              style={{
+                flexDirection: 'column',
+                alignItems: 'stretch',
+                textAlign: 'center',
+                padding: '0 0 20px',
+                overflow: 'hidden',
+                minHeight: '255px',
+                transition: 'transform .25s ease, box-shadow .25s ease'
+              }}
+            >
+              <span
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: '150px',
+                  overflow: 'hidden',
+                  borderRadius: '13px 13px 0 0',
+                  fontSize: '0'
+                }}
+              >
+                <img
+                  src="/images/hygine.png"
+                  alt="Professional cleaning and hygiene work"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+              </span>
+
+              <div style={{ padding: '18px 16px 0' }}>
+                <b style={{ fontSize: '14px' }}>
+                  Safety & Hygiene
+                </b>
+
+                <small style={{ fontSize: '10px' }}>
+                  Hygiene-first approach
+                </small>
+              </div>
+            </article>
+
+            {/* CLEAR PRICING */}
+            <article
+              style={{
+                flexDirection: 'column',
+                alignItems: 'stretch',
+                textAlign: 'center',
+                padding: '0 0 20px',
+                overflow: 'hidden',
+                minHeight: '255px',
+                transition: 'transform .25s ease, box-shadow .25s ease'
+              }}
+            >
+              <span
+                style={{
+                  display: 'grid',
+                  placeItems: 'center',
+                  width: '100%',
+                  height: '150px',
+                  overflow: 'hidden',
+                  borderRadius: '13px 13px 0 0',
+                  background: 'linear-gradient(135deg, #eaf7ff, #f8fcff)',
+                  fontSize: '0'
+                }}
+              >
+                <img
+                  src="/images/pricing.png"
+                  alt="Clear pricing"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block'
+                  }}
+                />
+              </span>
+
+              <div style={{ padding: '18px 16px 0' }}>
+                <b style={{ fontSize: '14px' }}>
+                  Clear Pricing
+                </b>
+
+                <small style={{ fontSize: '10px' }}>
+                  Quote based on requirement
+                </small>
+              </div>
+            </article>
+          </div>
         </div>
-      </article>
-
-      {/* SAFETY & HYGIENE */}
-      <article
-        style={{
-          flexDirection: 'column',
-          alignItems: 'stretch',
-          textAlign: 'center',
-          padding: '0 0 20px',
-          overflow: 'hidden',
-          minHeight: '255px',
-          transition: 'transform .25s ease, box-shadow .25s ease'
-        }}
-      >
-        <span
-          style={{
-            display: 'block',
-            width: '100%',
-            height: '150px',
-            overflow: 'hidden',
-            borderRadius: '13px 13px 0 0',
-            fontSize: '0'
-          }}
-        >
-          <img
-            src="/images/hygine.png"
-            alt="Professional cleaning and hygiene work"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block'
-            }}
-          />
-        </span>
-
-        <div style={{ padding: '18px 16px 0' }}>
-          <b style={{ fontSize: '14px' }}>
-            Safety & Hygiene
-          </b>
-
-          <small style={{ fontSize: '10px' }}>
-            Hygiene-first approach
-          </small>
-        </div>
-      </article>
-
-      {/* CLEAR PRICING */}
-      <article
-        style={{
-          flexDirection: 'column',
-          alignItems: 'stretch',
-          textAlign: 'center',
-          padding: '0 0 20px',
-          overflow: 'hidden',
-          minHeight: '255px',
-          transition: 'transform .25s ease, box-shadow .25s ease'
-        }}
-      >
-        <span
-          style={{
-            display: 'grid',
-            placeItems: 'center',
-            width: '100%',
-            height: '150px',
-            overflow: 'hidden',
-            borderRadius: '13px 13px 0 0',
-            background: 'linear-gradient(135deg, #eaf7ff, #f8fcff)',
-            fontSize: '0'
-          }}
-        >
-          <img
-            src="/images/pricing.png"
-            alt="Clear pricing"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block'
-            }}
-          />
-        </span>
-
-        <div style={{ padding: '18px 16px 0' }}>
-          <b style={{ fontSize: '14px' }}>
-            Clear Pricing
-          </b>
-
-          <small style={{ fontSize: '10px' }}>
-            Quote based on requirement
-          </small>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </section>
 
       <section id="golden-clients" className="golden-section">
         <div className="golden-head">
@@ -1207,12 +1226,12 @@ Message: ${form.message || ''}`;
         <div className="head">
           <p className="eyebrow">CUSTOMER FEEDBACK</p>
           <h2>What Our Customers Say</h2>
-          <p className="review-heading-rating">
-            <strong className="review-rating-number">5.0</strong>
+          <div className="review-heading-rating">
+            <strong className="review-rating-number">4.6</strong>
             <span aria-label="Five stars">★★★★★</span>
             <span className="review-rating-label">Google customer reviews</span>
             <a href={GOOGLE_REVIEWS} target="_blank" rel="noreferrer">View on Google →</a>
-          </p>
+          </div>
           <p className="review-heading-subtitle">Real experiences shared by Chennai Pro Care customers.</p>
         </div>
 
@@ -1222,15 +1241,15 @@ Message: ${form.message || ''}`;
               <strong className="review-stars" aria-label={`${review.rating} out of 5 stars`}>
                 {'★'.repeat(review.rating)}
               </strong>
-              {review.text && <p className="review-preview">“{review.text}”</p>}
+              <p className="review-preview">“{review.text}”</p>
               <b>{review.name}</b>
-              <small>Chennai · Customer Review</small>
+              <small>Chennai · Google Review</small>
             </article>
           ))}
         </div>
 
         <div className="review-button">
-          <a className="cta" href="https://www.google.com/maps/place/Chennai+Pro+Care+Pipeline+Cleaners/@12.9345571,80.1152387,15z/data=!4m6!3m5!1s0x3a525ff246784945:0x88a508a708989676!8m2!3d12.9345738!4d80.1254189!16s%2Fg%2F11zxwzxngp?entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">⭐ Read More Reviews on Google →</a>
+          <a className="cta" href={GOOGLE_REVIEWS} target="_blank" rel="noreferrer">⭐ Read More Reviews on Google →</a>
         </div>
       </section>
 
@@ -1238,74 +1257,49 @@ Message: ${form.message || ''}`;
 
       <section id="news" className="section news-awareness">
         <div className="news-heading">
-          <p className="eyebrow">BLOG</p>
+          <p className="eyebrow">BLOG &amp; WATER-SAFETY UPDATES</p>
           <h2>Recent News</h2>
-          <p>Discover our latest projects, service announcements, industry insights, and practical tips for maintaining clean water tanks and sumps.</p>
+          <p>Important water-safety reports and practical guidance for cleaner tanks, sumps and safer water systems.</p>
         </div>
 
-        <div className="news-editorial-grid">
-          <a className="news-feature-card" href="#blog-safe-water" onClick={e => { e.preventDefault(); setActiveBlogArticle(blogArticles.safeWater); }}>
-            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=85" alt="Chennai Pro Care water tank cleaning service" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/sump-cleaning.png'; }} />
-            <span className="news-feature-overlay" />
-            <div className="news-feature-content">
-              <h3>Why Professional Water Tank Cleaning Is Essential for a Safe Water Supply</h3>
-              <div className="news-meta"><span>▦ November 20, 2025</span><span>◯ Awareness</span></div>
-            </div>
-          </a>
-
-          <a className="news-feature-card" href="https://www.newindianexpress.com/states/tamil-nadu/2025/Oct/29/129-students-fall-sick-due-to-water-contamination-at-namakkal-engineering-college-hostel" target="_blank" rel="noreferrer">
-            <img src="https://images.unsplash.com/photo-1581093458791-9d42e3c7e6e7?auto=format&fit=crop&w=1200&q=85" alt="Water hygiene awareness and community safety" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/hygine.png'; }} />
-            <span className="news-feature-overlay" />
-            <div className="news-feature-content">
-              <h3>Namakkal College Water Contamination: A Wake-Up Call for Regular Tank and Sump Cleaning</h3>
-              <div className="news-meta"><span>▦ October 29, 2025</span><span>◯ Local Awareness · The New Indian Express ↗</span></div>
-            </div>
-          </a>
-
-          <div className="news-side-list">
-            <a className="news-side-item" href="#blog-professional-cleaning" onClick={e => { e.preventDefault(); setActiveBlogArticle(blogArticles.professional); }}>
-              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85" alt="Professional tank cleaning services for commercial facilities" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/why-professional-equipment.png'; }} />
-              <span className="news-side-copy"><strong>The Importance of Professional Tank Cleaning Services</strong><small>▦ May 24, 2025 <span>◯ Article</span></small></span>
+        <div className="news-cards">
+          {(showAllNews ? newsItems : newsItems.slice(0, 6)).map(item => (
+            <a
+              className="news-card"
+              key={item.title}
+              href={item.href}
+              target="_blank"
+              rel={item.internal ? 'noopener noreferrer' : 'noreferrer'}
+            >
+              <div className="news-card-image">
+                <img
+                  src={item.image}
+                  referrerPolicy="no-referrer"
+                  alt={item.title}
+                  loading="lazy"
+                  onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = item.fallback; }}
+                />
+                <span className="news-card-tag">{item.tag}</span>
+              </div>
+              <div className="news-card-body">
+                <h3>{item.title}</h3>
+                <div className="news-card-meta">
+                  <span>{item.date}</span>
+                  <span>{item.source}{item.internal ? '' : ' ↗'}</span>
+                </div>
+                <span className="news-card-link">Read more →</span>
+              </div>
             </a>
-            <a className="news-side-item" href="#blog-choose-provider" onClick={e => { e.preventDefault(); setActiveBlogArticle(blogArticles.chooseProvider); }}>
-              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Professional cleaning team and service standards" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/why-professional-equipment.png'; }} />
-              <span className="news-side-copy"><strong>Water Tank Cleaning Service: What to Look for When Choosing a Provider</strong><small>▦ May 24, 2025 <span>◯ Article</span></small></span>
-            </a>
-            <a className="news-side-item" href="#blog-commercial-hygiene" onClick={e => { e.preventDefault(); setActiveBlogArticle(blogArticles.commercial); }}>
-              <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=85" alt="Underground sump cleaning for commercial water storage" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/hygine.png'; }} />
-              <span className="news-side-copy"><strong>Hygienic Water Starts with a Clean Tank: Essential for Commercial Establishments in Chennai</strong><small>▦ June 6, 2025 <span>◯ Article</span></small></span>
-            </a>
-            <a className="news-side-item" href="https://timesofindia.indiatimes.com/city/chennai/recurring-black-silt-in-water-tanks-troubles-virugambakkam/articleshow/134841261.cms" target="_blank" rel="noreferrer">
-              <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=85" alt="Water tank and sump maintenance related to sediment concerns" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/sump-cleaning.png'; }} />
-              <span className="news-side-copy"><strong>Recurring Black Silt in Water Tanks Troubles Virugambakkam</strong><small>▦ October 9, 2026 <span>◯ Chennai News · Times of India ↗</span></small></span>
-            </a>
-            <a className="news-side-item" href="https://www.youtube.com/watch?v=p93Vuk05T44" target="_blank" rel="noreferrer">
-              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85" alt="Water hygiene and contamination awareness" onError={e => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/hygine.png'; }} />
-              <span className="news-side-copy"><strong>Video: Sewage Mixed in Drinking Water — Chennai Report</strong><small>▦ March 11, 2026 <span>◯ Polimer News · YouTube ↗</span></small></span>
-            </a>
-            <a className="news-side-item" href="https://www.newindianexpress.com/amp/story/cities/chennai/2026/Aug/29/ecoli-found-in-43-water-samples-from-chennais-zone-11" target="_blank" rel="noreferrer">
-              <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=85" alt="Clean drinking water flowing into a glass" />
-              <span className="news-side-copy"><strong>E. coli Found in 43 Water Samples from Chennai’s Zone 11</strong><small>▦ August 29, 2026 <span>◯ Water Quality · The New Indian Express ↗</span></small></span>
-            </a>
-            <a className="news-side-item" href="https://www.newindianexpress.com/cities/chennai/2026/Mar/11/sewage-mixed-water-leaves-arumbakkam-thirsty" target="_blank" rel="noreferrer">
-              <img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=900&q=85" alt="Municipal water pipes and water supply infrastructure" />
-              <span className="news-side-copy"><strong>Sewage-Mixed Water Leaves Arumbakkam Thirsty</strong><small>▦ March 11, 2026 <span>◯ Chennai News · The New Indian Express ↗</span></small></span>
-            </a>
-            <a className="news-side-item" href="https://www.newindianexpress.com/cities/chennai/2026/Sep/21/sewage-stains-chennais-major-thirst-quencher-chembarambakkam" target="_blank" rel="noreferrer">
-              <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=900&q=85" alt="Reservoir water and water resource landscape" />
-              <span className="news-side-copy"><strong>Sewage Concerns at Chembarambakkam, a Major Chennai Water Source</strong><small>▦ September 21, 2026 <span>◯ Water Pollution · The New Indian Express ↗</span></small></span>
-            </a>
-            <a className="news-side-item" href="https://thesouthfirst.com/health/chennais-ro-water-looked-clear-smelled-fine-and-tasted-good-but-e-coli-disagreed/" target="_blank" rel="noreferrer">
-              <img src="https://images.unsplash.com/photo-1523362628745-0c100150b3e2?auto=format&fit=crop&w=900&q=85" alt="Glass of drinking water" />
-              <span className="news-side-copy"><strong>Chennai Study Raises Questions About E. coli in RO-Purified Water</strong><small>▦ May 26, 2026 <span>◯ Research · The South First ↗</span></small></span>
-            </a>
-            <a className="news-side-item" href="https://www.dtnext.in/news/chennai/drinking-water-contamination-sewage-flows-unchecked-into-puzhal-lake" target="_blank" rel="noreferrer">
-              <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85" alt="Lake water as a drinking water resource" />
-              <span className="news-side-copy"><strong>Report Highlights Sewage Flow into Puzhal Lake</strong><small>▦ January 13, 2026 <span>◯ Chennai Water Source · DT Next ↗</span></small></span>
-            </a>
-          </div>
+          ))}
         </div>
-        <p className="news-disclaimer">External news and video cards open their original publisher. The three guidance articles open on this website. News reports describe specific incidents and do not imply that all Chennai water is unsafe.</p>
+
+        <div className="review-button">
+          <button type="button" className="cta" onClick={() => setShowAllNews(!showAllNews)}>
+            {showAllNews ? 'Show fewer ↑' : 'Show more news ↓'}
+          </button>
+        </div>
+
+        <p className="news-disclaimer">Every news report and guidance article opens in a new browser tab. News reports describe specific incidents and do not imply that all Chennai water is unsafe.</p>
       </section>
 
       <section id="products" className="section">
@@ -1315,45 +1309,57 @@ Message: ${form.message || ''}`;
           <h2>Products & Cleaning Equipment</h2>
 
           <p>
-Explore our water-treatment products, testing kits and cleaning accessories. Contact us to confirm product availability, specifications and pricing.
+            Explore our water-treatment products, testing kits and cleaning accessories. Contact us to confirm product availability, specifications and pricing.
           </p>
         </div>
 
         <div className="grid products">
           {products.map(product => (
             <article
-              className={`product${product.sold ? ' product-sold' : ''}`}
+              className={`product ${product.sold ? 'product-sold' : ''}`}
               key={product.name}
               onClick={() => { if (!product.sold) setProd(product); }}
+              aria-disabled={Boolean(product.sold)}
             >
               <div className="product-image-wrap">
-                <img src={product.media[0]} alt={product.name} />
-
+                <img
+                  src={product.media[0]}
+                  alt={product.name}
+                  loading="lazy"
+                  onError={event => {
+                    event.currentTarget.onerror = null;
+                    event.currentTarget.src = '/images/hygine.png';
+                  }}
+                />
                 <span className="media-count">
-                  {product.media.length} PHOTOS{product.videoLink ? ' + VIDEO' : ''}
+                  {product.media.length} PHOTOS{product.videoLink && !product.sold ? ' + VIDEO' : ''}
                 </span>
-                {product.sold && <span className="sold-badge">SOLD</span>}
-                {!product.sold && product.videoLink && <span className="play-badge">▶</span>}
+                {product.sold ? (
+                  <span className="sold-badge">SOLD</span>
+                ) : (
+                  <span className="play-badge">↗</span>
+                )}
               </div>
 
               <div className="product-body">
                 <h3>{product.name}</h3>
-
                 <p>{product.description}</p>
-
                 <div className="product-bottom">
                   {product.sold ? (
-                    <b className="sold-label">SOLD</b>
+                    <>
+                      <b className="sold-label">₹{product.price.toLocaleString('en-IN')}</b>
+                      <span className="sold-label">SOLD</span>
+                    </>
                   ) : (
                     <>
-                      <b>{product.price}</b>
+                      <b>{product.price ? `₹${product.price.toLocaleString('en-IN')}` : 'Price on enquiry'}</b>
                       <button
-                        onClick={e => {
-                          e.stopPropagation();
+                        onClick={event => {
+                          event.stopPropagation();
                           setProd(product);
                         }}
                       >
-                        View Product
+                        Order on Watsapp
                       </button>
                     </>
                   )}
@@ -1364,66 +1370,104 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
         </div>
       </section>
 
-            <section id="about-us" className="about-section">
-              <div className="about-shell">
-                <div className="about-heading">
-                  <div>
-                    <p className="eyebrow">OUR STORY</p>
-                    <h2>Built on trust.<br /><span>Growing with purpose.</span></h2>
-                  </div>
-                  <p className="about-intro">
-                    Founded by Mr. Babu in 2022, Chennai Pro Care was built around a simple promise: deliver dependable, professional water tank and sump cleaning with care for hygiene, workmanship, and customer trust. Today, the team continues that commitment while serving homes, apartments, businesses, and institutions across Chennai.
-                  </p>
-                </div>
-      
-                <div className="about-timeline about-timeline-second-row">
-                  <div className="story-node story-start">
-                    <div className="story-year">2022</div>
-                    <div className="story-connector" aria-hidden="true"><div className="story-dot"></div></div>
-                    <div className="story-card">
-                      <span>THE BEGINNING</span>
-                      <h3>Founder and Managing Director <strong>Mr. Babu</strong></h3>
-                      <p>Mr. Babu founded Chennai Pro Care in 2022 to help homes and businesses maintain cleaner, more hygienic water storage systems. The company’s approach is rooted in careful workmanship, dependable service, and respect for every customer’s trust.</p>
-                    </div>
-                  </div>
-                  <div className="story-node story-now">
-                    <div className="story-year">NOW</div>
-                    <div className="story-connector" aria-hidden="true"><div className="story-dot"></div></div>
-                    <div className="story-card">
-                      <span>THE JOURNEY CONTINUES</span>
-                      <h3>Led by CEO <strong>Abishek Manikandan</strong></h3>
-                      <p>Building on the company's foundation with professional teams, suitable equipment, and a continued commitment to dependable service.</p>
-                    </div>
-                  </div>
-                </div>
-      
-                <div className="about-stats" ref={aboutStatsRef}>
-                  <article>
-                    <strong>{aboutStats.years}+</strong>
-                    <span>Years of Service</span>
-                  </article>
-                  <article>
-                    <strong>{aboutStats.customers.toLocaleString('en-IN')}+</strong>
-                    <span>Happy Customers</span>
-                  </article>
-                  <article>
-                    <strong>{aboutStats.tanks.toLocaleString('en-IN')}+</strong>
-                    <span>Tanks Cleaned</span>
-                  </article>
-                </div>
-              </div>
-            </section>
+      <section id="about-us" className="about-section">
+        <div className="about-shell">
+          <div className="about-heading">
+            <div>
+              <p className="eyebrow">OUR STORY</p>
+              <h2>
+                Built on trust.<br />
+                <span>Growing with purpose.</span>
+              </h2>
+            </div>
 
-            <section id="booking" className="booking">
+            <div className="story-card">
+              <span>THE FOUNDATION</span>
+              <h3>
+                Founder and Managing Director <strong>Mr. Babu</strong>
+              </h3>
+              <p>
+                Founded by Mr. Babu in 2022, Chennai Pro Care was built around a
+                simple promise: deliver dependable, professional water tank and
+                sump cleaning with care for hygiene, workmanship, and customer
+                trust. Today, the team continues that commitment while serving
+                homes, apartments, businesses, and institutions across Chennai.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-timeline about-timeline-second-row">
+            <div className="story-node story-start">
+              <div className="story-year">2022</div>
+
+              <div className="story-connector" aria-hidden="true">
+                <div className="story-dot"></div>
+              </div>
+
+              <div className="story-card">
+                <span>THE BEGINNING</span>
+                <h3>
+                  Founder and Managing Director <strong>Mr. Babu</strong>
+                </h3>
+                <p>
+                  Mr. Babu founded Chennai Pro Care in 2022 to help homes and
+                  businesses maintain cleaner, more hygienic water storage systems.
+                  The company’s approach is rooted in careful workmanship,
+                  dependable service, and respect for every customer’s trust.
+                </p>
+              </div>
+            </div>
+
+            <div className="story-node story-now">
+              <div className="story-year">NOW</div>
+
+              <div className="story-connector" aria-hidden="true">
+                <div className="story-dot"></div>
+              </div>
+
+              <div className="story-card">
+                <span>THE JOURNEY CONTINUES</span>
+                <h3>
+                  Led by CEO <strong>Abishek Manikandan</strong>
+                </h3>
+                <p>
+                  Building on the company's foundation with professional teams,
+                  suitable equipment, and a continued commitment to dependable
+                  service.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* FIXED: removed the duplicated, unclosed <article> block */}
+          <div className="about-stats" ref={aboutStatsRef}>
+            <article>
+              <strong>{aboutStats.years}+</strong>
+              <span>Years of Service</span>
+            </article>
+
+            <article>
+              <strong>{aboutStats.customers.toLocaleString('en-IN')}+</strong>
+              <span>Happy Customers</span>
+            </article>
+
+            <article>
+              <strong>{aboutStats.tanks.toLocaleString('en-IN')}+</strong>
+              <span>Tanks Cleaned</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="booking" className="booking">
         <div>
           <p className="eyebrow">BOOK A SERVICE</p>
-
           <h2>Request a Cleaning Service</h2>
 
           <p>
-            In this demo, the form sends the enquiry directly to the business
-            WhatsApp. A production version can later connect to email, CRM or
-            a full booking system.
+            Share your details and service requirements. Your enquiry will be
+            sent to Chennai Pro Care on WhatsApp so the team can contact you
+            to discuss the service and confirm the schedule.
           </p>
 
           <p>
@@ -1565,6 +1609,7 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
             </a>
           </div>
         </div>
+
         <div className="map locations-map">
           <div className="maphead">
             <div>
@@ -1595,6 +1640,7 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
               <span>Chennai Pro Water Tank Cleaning Services</span>
               <small>Adambakkam, Chennai · Directions ↗</small>
             </a>
+
             <a
               href={LOCATIONS[1].map}
               target="_blank"
@@ -1629,31 +1675,38 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
               target="_blank"
               rel="noreferrer"
             >
-              WhatsApp
+              <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="" />
+              <span>WhatsApp</span>
             </a>
 
             <a
               href={SOCIAL.instagram}
               target="_blank"
               rel="noreferrer"
+              aria-label="Follow Chennai Pro Care on Instagram"
             >
-              Instagram
+              <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" />
+              <span>Instagram</span>
             </a>
 
             <a
               href={SOCIAL.facebook}
               target="_blank"
               rel="noreferrer"
+              aria-label="Follow Chennai Pro Care on Facebook"
             >
-              Facebook
+              <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="" />
+              <span>Facebook</span>
             </a>
 
             <a
               href={SOCIAL.youtube}
               target="_blank"
               rel="noreferrer"
+              aria-label="Follow Chennai Pro Care on YouTube"
             >
-              YouTube
+              <img src="https://cdn.simpleicons.org/youtube/FF0000" alt="" />
+              <span>YouTube</span>
             </a>
           </div>
 
@@ -1663,8 +1716,6 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
           </small>
         </div>
       </section>
-
-
 
       <footer>
         <div className="footer-brand">
@@ -1692,7 +1743,7 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
         </div>
 
         <small>
-          © 2026 Chennai Pro Care • Demo concept
+          © 2026 Chennai Pro Care. All rights reserved.
         </small>
       </footer>
 
@@ -1713,9 +1764,9 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
         onClose={() => setProd(null)}
       />
 
-      <BlogArticleModal article={activeBlogArticle} onClose={() => setActiveBlogArticle(null)} />
-
-      {pricingOpen && <PricingListModal onClose={() => setPricingOpen(false)} />}
+      {pricingOpen && (
+        <PricingListModal onClose={() => setPricingOpen(false)} />
+      )}
 
       <ServiceVideoModal
         service={serviceVideo}
@@ -1727,4 +1778,105 @@ Explore our water-treatment products, testing kits and cleaning accessories. Con
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+function ArticlePage({ article }) {
+  if (!article) return <App />;
+
+  return (
+    <main
+      style={{
+        minHeight: '100vh',
+        background: '#f4faff',
+        padding: '48px 20px',
+        fontFamily: 'Inter, Arial, sans-serif',
+        color: '#16334e'
+      }}
+    >
+      <article
+        style={{
+          maxWidth: '860px',
+          margin: '0 auto',
+          padding: 'clamp(24px, 5vw, 56px)',
+          background: '#fff',
+          border: '1px solid #dceaf5',
+          borderRadius: '22px',
+          boxShadow: '0 18px 55px rgba(6,55,101,.08)'
+        }}
+      >
+        <a
+          href="/#news"
+          style={{
+            display: 'inline-block',
+            marginBottom: '30px',
+            color: '#0d82d9',
+            fontWeight: 800,
+            textDecoration: 'none'
+          }}
+        >
+          ← Back to Chennai Pro Care
+        </a>
+
+        <p
+          style={{
+            color: '#0d82d9',
+            fontSize: '11px',
+            fontWeight: 800,
+            letterSpacing: '.14em',
+            textTransform: 'uppercase'
+          }}
+        >
+          {article.category}
+        </p>
+
+        <h1
+          style={{
+            margin: '10px 0 12px',
+            color: '#063765',
+            fontSize: 'clamp(30px, 5vw, 46px)',
+            lineHeight: 1.12
+          }}
+        >
+          {article.title}
+        </h1>
+
+        <p
+          style={{
+            marginBottom: '34px',
+            color: '#71869a',
+            fontSize: '13px'
+          }}
+        >
+          {article.date} · Chennai Pro Care
+        </p>
+
+        {article.paragraphs.map((paragraph, index) => (
+          <p
+            key={index}
+            style={{
+              color: '#526b80',
+              fontSize: '16px',
+              lineHeight: 1.85,
+              margin: '0 0 22px'
+            }}
+          >
+            {paragraph}
+          </p>
+        ))}
+
+        <a
+          className="cta"
+          href={wa(`Hi Chennai Pro Care, I read your article “${article.title}” and would like to enquire about cleaning services.`)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Enquire on WhatsApp →
+        </a>
+      </article>
+    </main>
+  );
+}
+
+const articleSlug = new URLSearchParams(window.location.search).get('article');
+
+createRoot(document.getElementById('root')).render(
+  <ArticlePage article={articleSlug ? blogArticles[articleSlug] : null} />
+);
