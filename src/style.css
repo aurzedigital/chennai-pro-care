@@ -1078,7 +1078,7 @@ nav a:hover {
   gap: 14px;
 }
  
-.client-track-wrap {
+-wrap {
   overflow: hidden;
   position: relative;
 }
