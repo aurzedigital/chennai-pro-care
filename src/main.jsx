@@ -292,7 +292,7 @@ const goldenClientRows = [
     { name: 'Season 4 Residences', logo: 'https://www.google.com/s2/favicons?domain=season4.in&sz=128' },
     { name: 'Naturals', logo: 'https://www.google.com/s2/favicons?domain=naturals.in&sz=128' },
     { name: 'Ramada by Wyndham', logo: 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Ramada_Worldwide_logo_(2).svg' },
-    { name: 'Malles Trusted Through Generations', logo: 'Malles.png' },
+    { name: 'Malles Trusted Through Generations', logo: '/images/Malles.png' },
     { name: 'Blue Cross of India', logo: 'https://r2.cdn.yaclass.in/ef9352a5-91cb-4da9-9580-fa2f3ce0024e/bciregw1800png.png' },
     { name: 'Chitra Township', logo: 'images/chirtatownship.png' },
     { name: 'Techno Digital', logo: 'https://technodigital.in/wp-content/uploads/2025/04/Techno-Digital-Logo-Vertical-1.png' },
