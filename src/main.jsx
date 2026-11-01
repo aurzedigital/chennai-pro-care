@@ -661,11 +661,46 @@ function App() {
   const aboutStatsRef = useRef(null);
 
   useEffect(() => {
+    let timerElapsed = false;
+    let imageReady = false;
+    let cancelled = false;
+
+    const maybeOpenOffer = () => {
+      if (timerElapsed && imageReady && !cancelled) {
+        setOfferOpen(true);
+      }
+    };
+
+    // Start loading the offer image before opening the popup.
+    // The popup appears after the existing 1.2-second delay AND
+    // only after the image has loaded, preventing the buttons
+    // from appearing by themselves while the image is still loading.
+    const offerImage = new Image();
+
+    const markImageReady = () => {
+      imageReady = true;
+      maybeOpenOffer();
+    };
+
+    offerImage.onload = markImageReady;
+    offerImage.onerror = markImageReady;
+    offerImage.src = '/images/chennai-pro-care-offer.jpg';
+
+    if (offerImage.complete) {
+      markImageReady();
+    }
+
     const timer = window.setTimeout(() => {
-      setOfferOpen(true);
+      timerElapsed = true;
+      maybeOpenOffer();
     }, 1200);
 
-    return () => window.clearTimeout(timer);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+      offerImage.onload = null;
+      offerImage.onerror = null;
+    };
   }, []);
 
   useEffect(() => {
