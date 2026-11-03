@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Analytics } from '@vercel/analytics/react';
 import './style.css';
 
 const B = {
@@ -1848,5 +1849,8 @@ function ArticlePage({ article }) {
 const articleSlug = new URLSearchParams(window.location.search).get('article');
 
 createRoot(document.getElementById('root')).render(
-  <ArticlePage article={articleSlug ? blogArticles[articleSlug] : null} />
+  <>
+    <ArticlePage article={articleSlug ? blogArticles[articleSlug] : null} />
+    <Analytics />
+  </>
 );
